@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { ThemeProvider } from "styled-components"
-import theme from "./theme/";
-import "./theme/baseline.css";
+import styled, { ThemeProvider } from 'styled-components';
+import theme from './theme/';
+import './theme/baseline.css';
+import MuseumList from 'components/MuseumList';
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const Container = styled.div`
   padding-right: 32px;
   max-width: 1280px;
   margin: auto;
-`
+`;
 
 const Box = styled.div`
   display: flex;
@@ -22,13 +23,14 @@ const Box = styled.div`
   flex-direction: column;
   white-space: pre-line;
   padding: 5px;
-`
+`;
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container>
         <Box>
+          <MuseumList />
         </Box>
       </Container>
     </ThemeProvider>
